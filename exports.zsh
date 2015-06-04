@@ -4,3 +4,4 @@ export MANPATH=/opt/local/share/man:$MANPATH
 export LESS='--ignore-case --raw-control-chars'
 export PAGER='less'
 export EDITOR='subl -w'
+export PYTHONPATH=/usr/local/bin:~/.powerline/plugins:$PYTHONPATH
