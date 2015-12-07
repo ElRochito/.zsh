@@ -4,6 +4,7 @@ alias gowork='goslave; cd Dev/work'
 alias gotitanium='goslave; cd Dev/mobile/titanium'
 alias gocordova='goslave; cd Dev/mobile/cordova'
 alias goweb='goslave; cd Dev/web'
+alias gotaf='goslave; cd Dev/web/_taf'
 alias govagrant='goslave; cd Dev/debian'
 
 # -------------------------------------------------------------------
