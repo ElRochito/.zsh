@@ -20,3 +20,4 @@ source ~/.profile
 if [[ -d ~/.fortune ]]; then
   fortune ~/.fortune/fortune | cowsay -f $(ls /usr/local/Cellar/cowsay/3.03/share/cows | gshuf -n1) | lolcat
 fi
+export VLC_PLUGIN_PATH="/Applications/VLC.app/Contents/MacOS/plugins"
