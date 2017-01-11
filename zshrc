@@ -1,5 +1,3 @@
-eval $(gpg-agent --daemon)
-
 # Source every file in this directory
 source ~/.zsh/checks.zsh
 source ~/.zsh/exports.zsh
@@ -18,6 +16,5 @@ source ~/.profile
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 if [[ -d ~/.fortune ]]; then
-  #fortune ~/.fortune/fortune | cowsay -f $(ls /usr/local/Cellar/cowsay/3.04/share/cows | gshuf -n1) | lolcat
+  fortune ~/.fortune/fortune | cowsay -f $(ls /usr/local/Cellar/cowsay/3.04/share/cows | gshuf -n1) | lolcat
 fi
-export VLC_PLUGIN_PATH="/Applications/VLC.app/Contents/MacOS/plugins"
