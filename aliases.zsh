@@ -47,63 +47,6 @@ alias 'wordy=wc -w * | sort | tail -n10' # sort files in current directory by th
 alias 'filecount=find . -type f | wc -l' # number of files (not directories)
 
 # -------------------------------------------------------------------
-# Mac only
-# -------------------------------------------------------------------
-if [[ $IS_MAC -eq 1 ]]; then
-    alias ql='qlmanage -p 2>/dev/null' # OS X Quick Look
-    alias oo='open .' # open current directory in OS X Finder
-    alias 'today=calendar -A 0 -f /usr/share/calendar/calendar.mark | sort'
-    alias 'mailsize=du -hs ~/Library/mail'
-    alias 'smart=diskutil info disk0 | grep SMART' # display SMART status of hard drive
-    # Hall of the Mountain King
-    alias cello='say -v cellos "di di di di di di di di di di di di di di di di di di di di di di di di di di"'
-    # alias to show all Mac App store apps
-    alias apps='mdfind "kMDItemAppStoreHasReceipt=1"'
-    # reset Address Book permissions in Mountain Lion (and later presumably)
-    alias resetaddressbook='tccutil reset AddressBook'
-    # refresh brew by upgrading all outdated casks
-    alias refreshbrew='brew outdated | while read cask; do brew upgrade $cask; done'
-    # rebuild Launch Services to remove duplicate entries on Open With menu
-    alias rebuildopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.fram ework/Support/lsregister -kill -r -domain local -domain system -domain user'
-fi
-
-
-# -------------------------------------------------------------------
-# remote machines
-# -------------------------------------------------------------------
-alias 'palantir=ssh mhn@palantir.ome.ksu.edu -p 11122'
-alias 'pvnc=open vnc://palantir.ome.ksu.edu'
-alias 'ksunix=ssh mhn@unix.ksu.edu'
-alias 'veld=ssh mhn@veld.ome.ksu.edu'
-alias 'dev=ssh mhn@ome-dev-as1.ome.campus'
-alias 'wf=ssh markn@markn.webfactional.com'
-
-# -------------------------------------------------------------------
-# database
-# -------------------------------------------------------------------
-alias 'psqlstart=/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start'
-alias 'psqlstop=/usr/local/pgsql/bin/pg_ctl stop'
-#alias mysql='mysql -u root'
-#alias mysqladmin='mysqladmin -u root'
-
-# -------------------------------------------------------------------
-# ome devvm start, stop, ssh, and mount
-# -------------------------------------------------------------------
-alias 'startvm=VBoxHeadless --startvm devvm'
-alias 'stopvm=VBoxManage controlvm devvm poweroff'
-alias 'devvm=ssh -p 10022 ome@localhost'
-alias 'devmount=mount_smbfs //ome:ch1cag0@localhost:10139/ome /Users/$USERNAME/Projects/devvm/'
-
-# -------------------------------------------------------------------
-# Mercurial (hg)
-# -------------------------------------------------------------------
-alias 'h=hg status'
-alias 'hc=hg commit'
-alias 'push=hg push'
-alias 'pull=hg pull'
-alias 'clone=hg clone'
-
-# -------------------------------------------------------------------
 # Git
 # -------------------------------------------------------------------
 alias g='git'
@@ -137,13 +80,6 @@ alias gsh="git shortlog | grep -E '^[ ]+\w+' | wc -l"
 
 # gu shows a list of all developers and the number of commits they've made
 alias gu="git shortlog | grep -E '^[^ ]'"
-
-# -------------------------------------------------------------------
-# Python virtualenv
-# -------------------------------------------------------------------
-alias mkenv='mkvirtualenv'
-alias on="workon"
-alias off="deactivate"
 
 # -------------------------------------------------------------------
 # Oddball stuff
