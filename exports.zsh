@@ -16,11 +16,14 @@ export NODE_PATH=/Users/julio/.nvm/versions/node/`nvm current`/lib/node_modules
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
-# Path to your oh-my-zsh installation.
+# zsh installation
 export ZSH=/Users/julio/.oh-my-zsh
 
+# java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
 
+# editor
 export EDITOR='sublime -w'
 
+# android
 export ANDROID_HOME=/Volumes/SLAVE/Dev/work/_sdks/android
