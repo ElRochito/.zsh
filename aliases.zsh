@@ -1,4 +1,3 @@
-alias subl='sublime'
 alias vsc='open -a "Visual Studio Code" $*'
 #work
 alias goslave='cd /Volumes/SLAVE'
