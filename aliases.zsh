@@ -7,6 +7,7 @@ alias gocordova='goslave; cd Dev/mobile/cordova'
 alias goweb='goslave; cd Dev/web'
 alias gotaf='goslave; cd Dev/web/_taf'
 alias govagrant='goslave; cd Dev/debian'
+alias gosoyhuce='cd ~/Documents/Projects/SoyHuCe'
 
 # -------------------------------------------------------------------
 # use nocorrect alias to prevent auto correct from "fixing" these

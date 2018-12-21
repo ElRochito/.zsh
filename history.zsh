@@ -12,7 +12,7 @@
 # bindkey "^[[A" up-line-or-beginning-search
 # bindkey "^[[B" down-line-or-beginning-search
 
-HISTFILE="$HOME/.zhistory"
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000000
 SAVEHIST=10000000
 
