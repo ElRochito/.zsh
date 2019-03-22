@@ -3,6 +3,7 @@ export GOPATH=$HOME/.go
 export GOBIN=$HOME/.go/bin
 
 # nvm
+unset npm_config_prefix
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -20,10 +21,13 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 export ZSH=/Users/julio/.oh-my-zsh
 
 # java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home
 
 # editor
 export EDITOR='subl'
 
 # android
 export ANDROID_HOME=/Volumes/SLAVE/Dev/work/_sdks/android
+
+# vault
+export VAULT_ADDR=https://vault.soyhuce.lan:443

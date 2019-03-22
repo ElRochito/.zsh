@@ -28,7 +28,7 @@ export MINIO_SECRET_KEY=miniopassword
 export MINIO_DOMAIN=minio.develop
 
 #alias miniostart='minio server ~/Tools/minio > /dev/null 2>&1 &'
-alias miniostart='minio server ~/Tools/minio'
+alias miniostart='minio server --address 127.0.0.1:9001 ~/Tools/minio'
 alias miniostop='mc admin service stop'
 
 # Make vim the default editor.
