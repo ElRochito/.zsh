@@ -31,3 +31,5 @@ export ANDROID_HOME=/Volumes/SLAVE/Dev/work/_sdks/android
 
 # vault
 export VAULT_ADDR=https://vault.soyhuce.lan:443
+
+export ZPLUG_HOME=/Users/julio/.zplug
