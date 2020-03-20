@@ -7,6 +7,7 @@ alias gocordova='goslave; cd Dev/mobile/cordova'
 alias goweb='goslave; cd Dev/web'
 alias gotaf='goslave; cd Dev/web/_taf'
 alias govagrant='goslave; cd Dev/debian'
+alias gosoyhuce='cd ~/Documents/Projects/SoyHuCe'
 
 # -------------------------------------------------------------------
 # use nocorrect alias to prevent auto correct from "fixing" these
@@ -153,3 +154,11 @@ function mkicns() {
         rm -r $filename.iconset
     fi
 }
+
+## MINIO
+export MINIO_ACCESS_KEY=miniouser
+export MINIO_SECRET_KEY=miniopassword
+export MINIO_DOMAIN=minio.develop
+
+alias miniostart='minio server --address 127.0.0.1:9001 ~/Data/minio'
+alias miniostop='mc admin service stop'
