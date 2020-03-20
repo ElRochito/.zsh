@@ -25,11 +25,22 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 ## MINIO
 export MINIO_ACCESS_KEY=miniouser
 export MINIO_SECRET_KEY=miniopassword
-export MINIO_DOMAIN=minio.develop
+# export MINIO_DOMAIN=minio.develop
 
 #alias miniostart='minio server ~/Tools/minio > /dev/null 2>&1 &'
-alias miniostart='minio server ~/Tools/minio'
+alias miniostart='minio server --address ":1985"  ~/Tools/minio'
 alias miniostop='mc admin service stop'
+
+alias check_sonar="checkSonar"
+function checkSonar () {
+    find ./tests -type f -name '*.php' | xargs sed -e 's/@covers//' -i ""
+
+    ./vendor/bin/phpunit --dump-xdebug-filter xdebug-filter.php
+    ./vendor/bin/phpunit --prepend xdebug-filter.php --config=phpunit.xml
+
+    rm -fr xdebug-filter.php
+    git reset --hard HEAD
+}
 
 # Make vim the default editor.
 export EDITOR='vim';
