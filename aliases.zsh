@@ -1,12 +1,6 @@
+alias myip='curl icanhazip.com'
 alias vsc='open -a "Visual Studio Code" $*'
 #work
-alias goslave='cd /Volumes/SLAVE'
-alias gowork='goslave; cd Dev/work'
-alias gotitanium='goslave; cd Dev/mobile/titanium'
-alias gocordova='goslave; cd Dev/mobile/cordova'
-alias goweb='goslave; cd Dev/web'
-alias gotaf='goslave; cd Dev/web/_taf'
-alias govagrant='goslave; cd Dev/debian'
 alias gosoyhuce='cd ~/Documents/Projects/SoyHuCe'
 
 # -------------------------------------------------------------------

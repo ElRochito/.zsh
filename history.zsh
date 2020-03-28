@@ -12,8 +12,8 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 
-bindkey '^ ' autosuggest-accept
-bindkey '^M' autosuggest-execute
+# bindkey '^ ' autosuggest-accept
+# bindkey '^M' autosuggest-execute
 
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
