@@ -25,7 +25,7 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 ## MINIO
 export MINIO_ACCESS_KEY=miniouser
 export MINIO_SECRET_KEY=miniopassword
-# export MINIO_DOMAIN=minio.develop
+export MINIO_DOMAIN=minio.develop
 
 #alias miniostart='minio server ~/Tools/minio > /dev/null 2>&1 &'
 alias miniostart='minio server --address ":1985"  ~/Tools/minio'
@@ -45,11 +45,7 @@ function checkSonar () {
 # Make vim the default editor.
 export EDITOR='vim';
 
-# Increase Bash history size. Allow 32³ entries; the default is 500.
-export HISTSIZE='32768';
-export HISTFILESIZE="${HISTSIZE}";
-# Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL='ignoreboth';
+
 
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
@@ -63,11 +59,3 @@ export MANPAGER='less -X';
 
 # Always enable colored `grep` output.
 export GREP_OPTIONS='--color=auto';
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
