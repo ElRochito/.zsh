@@ -20,6 +20,13 @@ function user_symbol() {
 
 current_dir="%{$fg_bold[blue]%}%~%{$reset_color%}"
 
+function git_prompt_info() {
+    local ref
+    ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
+    ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+}
+
 function git_status_info() {
   if [[ -n $(is_git) ]]; then
     if [[ -n "$(command git show-ref origin/$(git_current_branch) 2> /dev/null)" ]]; then
