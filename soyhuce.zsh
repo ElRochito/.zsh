@@ -38,7 +38,10 @@ function checkSonar () {
     ./vendor/bin/phpunit --dump-xdebug-filter xdebug-filter.php
     ./vendor/bin/phpunit --prepend xdebug-filter.php --config=phpunit.xml
 
+    sonar-scanner -Dsonar.host.url=http://localhost:30555
+
     rm -fr xdebug-filter.php
+
     git reset --hard HEAD
 }
 
